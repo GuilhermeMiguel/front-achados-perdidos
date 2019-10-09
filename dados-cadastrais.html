@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dados Cadastrais</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="css/dados-cadastrais.css">
+  <!--===============================================================================================-->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <section id="section-cadastro">
+
+    <form class="form-horizontal">
+      <div class="container">
+
+        <div class="row" id="linha-cadastro">
+
+          <div class="panel-body" id="area-cadastro">
+            <div id="banner">
+              <div class="container-flex">
+                <div class="item"> 
+                    <img src="images/icone-dados-cadastrais.png">
+                    Dados Cadastrais
+                </div>
+                <div class="item" id="alterar-senha"> 
+                    <img src="images/icone-cadeado.png">
+  
+                  <a id="modalID" class="alterar">Alterar Senha</a> 
+                </div>
+              </div>
+            </div>
+
+            <div id="area-cadastro-formulario">
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="Nome" id="texto-label">Nome</label>
+              <div class="col-md-8">
+                <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                  <input class="input100" type="text" name="username" placeholder="">
+                  <span class="focus-input100"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Text input-->
+            
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="Matricula" id="texto-label">Matricula</label>
+              <div class="col-md-8">
+                <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                  <input class="input100" type="text" name="username" placeholder="">
+                  <span class="focus-input100"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="Nascimento" id="texto-label">Nascimento</label>
+              <div class="col-md-5">
+                <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                  <input class="input100" type="text" name="username" placeholder="">
+                  <span class="focus-input100"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Multiple Radios (inline) -->
+
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="radios" id="texto-label-sexo">Sexo</label>
+              <div class="col-md-8">
+                <label required="" class="radio-inline" for="radios-0" id="label-sexo">
+                  <input name="sexo" id="sexo" value="feminino" type="radio" required>
+                  Feminino
+                </label>
+                <label class="radio-inline" for="radios-1" id="label-sexo">
+                  <input name="sexo" id="sexo" value="masculino" type="radio">
+                  Masculino
+                </label>
+              </div>
+            </div>
+
+            <!-- Prepended text-->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="prependedtext" id="texto-label">Telefone</label>
+              <div class="col-md-5">
+                <div class="input-group">
+                  <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                    <input class="input100" type="text" name="username" placeholder="">
+                    <span class="focus-input100"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Prepended text-->
+            <div class="form-group">
+
+              <label class="col-md-3 control-label" for="prependedtext" id="texto-label">Email</label>
+              <div class="col-md-5">
+                <div class="input-group">
+                  <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                    <input class="input100" type="text" name="username" placeholder="">
+                    <span class="focus-input100"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <!-- Select Basic -->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="Cargo" id="texto-label-cargo">Cargo</label>
+              <div class="col-md-5">
+                <select required id="Cargo" name="Cargo" class="form-control">
+                  <option value="Selecione">Selecione</option>
+                  <option value="Solteiro(a)">Solteiro(a)</option>
+                  <option value="Casado(a)">Casado(a)</option>
+                  <option value="Divorciado(a)">Divorciado(a)</option>
+                  <option value="Viuvo(a)">Viuvo(a)</option>
+                </select>
+              </div>
+            </div>
+
+
+            <div class="form-group" id="area-botao">
+
+              <div class="col-md-4">
+
+                <button class="login100-form-btn">
+                  Salvar
+                </button>
+
+              </div>
+            </div>
+          </div>
+          </div>
+    </form>
+
+  </section>
+
+  <div id="modal-principal" class="modal-container">
+      <div class="modal-troca-senha">
+      
+          <div id="banner2">
+              <p class="titulo">Alteração da Senha</p>
+              <div class="fechar-modal" style="background-image: url(images/icone-fechar-modal.png);">
+                 </div>
+                </div>
+                
+                <div class="form-row area-alteracao-senha">
+                    <div class="form-group col-md-6">
+                        <label for="inputSenhaAntiga">Senha Antiga</label>
+                        <input type="text" class="form-control" id="inputSenhaAntiga" placeholder="">
+                      </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputSenhaNova">Nova Senha </label>
+                    <input type="password" class="form-control" id="inputSenhaNova" placeholder="">
+                  </div>
+                </div>
+   
+         <div class="form-group" id="area-botao-modal">
+   
+           <div class="col-md-3">
+   
+             <input type="button" value="Salvar" class="login100-form-btn">
+   
+           </div>
+
+           <div class="col-md-4">
+   
+            <input type="button" value="Cancelar" class="login100-form-btn">
+  
+          </div>
+        
+      </div> 
+   </div>
+   </div>
+   
+     <script>
+       
+       function iniciaModal(modalID) {
+           const modal = document.getElementById(modalID);
+           modal.classList.add('mostrar');
+           modal.addEventListener('click', (e) => {
+               if(e.target.id == modalID || e.target.className == 'fechar') {
+                   modal.classList.remove('mostrar');
+               }
+           });
+       }
+   
+       const cadastrar = document.querySelector('.item .alterar');
+       cadastrar.addEventListener('click', () => iniciaModal('modal-principal'));
+   
+       </script>
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Cadastro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="css/pesquisa-objetos.css">
+  <link rel="stylesheet" type="text/css" href="css/menu-abas.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!--===============================================================================================-->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <section class="cadastro">
+
+    <form class="form-horizontal">
+      <div class="container">
+
+        <div class="row" id="linha-cadastro">
+
+          <div class="panel-body" id="area-cadastro">
+            <div id="titulo">
+              <img src="images/icone-tela-objeto.png"> Objetos
+            </div>
+
+            <!-- Text input-->
+            <div id="area-pesquisa">
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="inputCategoria">Categoria</label>
+                        <select id="inputCategoria" class="form-control">
+                          <option selected>Escolher...</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                  <div class="form-group col-md-3">
+                    <label for="inputCor">Cor</label>
+                    <input type="password" class="form-control" id="inputCor" placeholder="Ex: Preto">
+                  </div>
+                   
+                <div class="form-group col-md-3">
+                  <label for="inputTamanho">Data Inicio</label>
+                  <input type="text" class="form-control" id="inputTamanho" placeholder="Ex: 10 cm">
+                </div>
+
+
+                <div class="form-group col-md-3">
+                    <label for="inputTamanho">Data Fim</label>
+                    <input type="text" class="form-control" id="inputTamanho" placeholder="Ex: 10 cm">
+                  </div>
+              </div>
+            </div>
+
+            <div id="area-botao">
+              <div class="item" id="botao1">
+                <img src="images/icone-search.png" >
+                <input type="button" class="pesquisar" value="Pesquisar" id="botoes">
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+
+</body>
+</html>

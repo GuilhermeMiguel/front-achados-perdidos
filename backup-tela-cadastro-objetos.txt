@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Cadastro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="css/cadastro-objetos.css">
+  
+  <!--===============================================================================================-->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+    <section class="cadastro">
+
+        <form class="form-horizontal">
+            <div class="container">
+       
+            <div class="row" id="linha-cadastro">
+                   
+                <div class="panel-body" id="area-cadastro">
+                    <div id="titulo">
+                        <img src="images/icone-tela-objeto.png"> Objetos
+                    </div>
+
+                    <!-- Text input-->
+                  <div id="area-pesquisa">
+                      <div id="elementos">
+                            <div class="form-group">
+                                    <label class="col-md-1 control-label" for="Selecione" id="texto-label">Selecione<h11>*</h11></label>
+                                    <label class="col-md-1"></label>
+                                    <label class="col-md-3 control-label" for="Contenha" id="texto-label2" >Que Contenha<h11>*</h11></label> 
+
+                                    <br> 
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-3">
+                                      <select id="Objetos" name="Objetos" class="form-control">
+                                          <option value=""></option>
+                                        <option value="Categoria">Categoria</option>
+                                        <option value="Cor">Cor</option>
+                                      </select>
+                                    </div>                                      
+                                            
+                                           
+                                            <div class="col-md-5">
+                                                    <input class="form-control"type="text" name="pesquisa" placeholder="Deixe vazio para pesquisar todos">
+                                            </div>
+                                        </div>  
+                                  </div>
+
+                            </div>
+                      
+
+                      <div id="area-botao">
+                       
+                            <div class="item" id="botao1">
+                                <img src="images/icone-search.png">
+                                <input type="button"  class="pesquisar" value="Pesquisar" id="botoes">
+                                 
+                                </div>
+
+                        <div class="item" id="botao2">
+                            <img src="images/icone-adicionar2.png">
+                        <input type="button" class="adicionar" value="Cadastrar" id="botoes">
+                      </div>
+
+                      <div class="item" id="botao3">
+                          <img src="images/icone-documento.png">
+                      <input type="button" class="documento" value="É documento?" id="botoes">
+                
+                    </div>
+               
+                </div> 
+                      </div>
+                      </form>
+    </section>
+
+
+    
+      <div id="modal-promocao" class="modal-container">
+      <div class="teste-modal">
+          <div class="panel-body" id="area-cadastro-modal">
+        <form class="form-horizontal">
+          
+
+        <div class="row" id="linha-cadastro">
+
+        
+            <div id="banner">
+              <img src="images/icone-cadastro-objetos.png">
+            </div>
+            <!-- Text input-->
+
+
+            <div class="container-flex" id="primeiro-container">
+              <label class="control-label" for="Categoria" id="texto-label">Categoria<h11>*</h11>
+              </label>
+              <div class="item">
+                <select id="Categoria" name="Categoria" class="form-control">
+                  <option value=""></option>
+                  <option value="Relogio">Relogio</option>
+                  <option value="Smartphone">Smartphone</option>
+                  <option value="Notebook">Notebook</option>
+                  <option value="Pen Drive">Pen Drive</option>
+                </select>
+              </div>
+          
+              <label class="control-label" for="Cor" id="texto-label-cor">Cor<h11>*</h11></label>
+              <div class="item">
+                
+                <div class="wrap-input100 validate-input">
+                  <input class="input100" type="text" name="Cor" placeholder="Digite a cor">
+                  <span class="focus-input100"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="container-flex">
+              <label class=" control-label" for="Tamanho" id="texto-label">Tam Aprox.<h11>*</h11></label>
+              <div class="item">
+                <div class="wrap-input100 validate-input">
+                  <input class="input100" type="text" name="Tamanho" placeholder="Tamanho aprox (cm)">
+                  <span class="focus-input100"></span>
+                </div>
+              </div>
+           
+              <label class="control-label" for="Nascimento" id="texto-label">Local<h11>*</h11></label>
+              <div class="item">
+                <div class="wrap-input100 validate-input">
+                  <input class="input100" type="text" name="Local" placeholder="Local">
+                  <span class="focus-input100"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Multiple Radios (inline) -->
+
+            <div class="container-flex">
+              <label class="control-label" for="Data" id="texto-label">Data aprox<h11>*</h11></label>
+              <div class="item">
+                <div class="wrap-input100 validate-input">
+                  <input class="input100" type="text" name="Data" placeholder="Data">
+                  <span class="focus-input100"></span>
+                </div>
+              </div>
+           
+              <label class="control-label" for="prependedtext" id="texto-label">Foto<h11>*</h11></label>
+              <div class="item">
+                <div class="input-group">
+                  <div>
+                    <input class="input100" type="file" name="Foto" id="foto">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Prepended text-->
+            <div class="container-flex">
+
+              <label class="control-label" for="prependedtext" id="texto-label">InformaçSões Adicionais<h11>*
+                </h11></label>
+              <br /> <br />
+            </div>
+
+         
+             
+              <div class="item">
+                <textarea name="txtMensagem" rows="6" cols="80" id="txtMensagem"
+                  placeholder="Digite sua mensagem"></textarea>
+              </div>
+              </div>
+          
+
+
+
+
+            <!-- Select Basic -->
+
+
+            <div class="form-group" id="area-botao-salvar">
+
+              <div class="col-md-4">
+
+                <button class="login100-form-btn">
+                  Salvar
+                </button>
+
+              </div>
+            </form>
+
+            </div>
+          </div>
+   
+
+   
+  
+</div>
+
+
+
+
+	<script>
+    
+    function iniciaModal(modalID) {
+        const modal = document.getElementById(modalID);
+        modal.classList.add('mostrar');
+        modal.addEventListener('click', (e) => {
+            if(e.target.id == modalID || e.target.className == 'fechar') {
+                modal.classList.remove('mostrar');
+            }
+        });
+    }
+
+    const cadastrar = document.querySelector('.cadastro .adicionar');
+    cadastrar.addEventListener('click', () => iniciaModal('modal-promocao'));
+
+    const documento  = document.querySelector('.cadastro .documento');
+    documento.addEventListener('click', () => iniciaModal('modal-promocao'));
+
+    </script>
+	
+
+</body>
+
+</html>

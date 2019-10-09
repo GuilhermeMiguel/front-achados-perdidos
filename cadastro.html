@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+
+<head>
+  <title>Cadastro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="css/cadastro.css">
+  <!--===============================================================================================-->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <section id="section-cadastro">
+
+    <form class="form-horizontal">
+      <div class="container">
+        <div class="row" id="linha-cadastro">
+
+          <div class="col-md-6" id="imagem-cadastro" style="background-image: url(images/bg-03.jpg);">
+            <h1>Cadastre-se</h1>
+          </div>
+
+          <div class="col-md-6" id="area-cadastro">
+
+            <div class="panel-body">
+              <div class="form-group">
+                <div class="col-md-11 control-label" id="texto-campo-obrigatorio">
+                  <p class="help-block">
+                    <h11>*</h11> Campo Obrigatório
+                  </p>
+                </div>
+              </div>
+
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-3 control-label" for="Nome" id="texto-label">Nome<h11>*</h11></label>
+                <div class="col-md-8">
+                  <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                    <input class="input100" type="text" name="username" placeholder="Digite seu nome">
+                    <span class="focus-input100"></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-3 control-label" for="Matricula" id="texto-label">Matricula<h11>*</h11></label>
+                <div class="col-md-8">
+                  <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                    <input class="input100" type="text" name="username" placeholder="Digite sua matricula">
+                    <span class="focus-input100"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-md-3 control-label" for="Nascimento" id="texto-label">Nascimento<h11>*</h11></label>
+                <div class="col-md-5">
+                  <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                    <input class="input100" type="text" name="username" placeholder="DD/MM/AAAA">
+                    <span class="focus-input100"></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Multiple Radios (inline) -->
+
+              <div class="form-group">
+                <label class="col-md-3 control-label" for="radios" id="texto-label-sexo">Sexo<h11>*</h11></label>
+                <div class="col-md-8">
+                  <label required="" class="radio-inline" for="radios-0" id="label-sexo">
+                    <input name="sexo" id="sexo" value="feminino" type="radio" required>
+                    Feminino
+                  </label>
+                  <label class="radio-inline" for="radios-1" id="label-sexo">
+                    <input name="sexo" id="sexo" value="masculino" type="radio">
+                    Masculino
+                  </label>
+                </div>
+              </div>
+
+              <!-- Prepended text-->
+              <div class="form-group">
+                <label class="col-md-3 control-label" for="prependedtext" id="texto-label">Telefone<h11>*</h11></label>
+                <div class="col-md-5">
+                  <div class="input-group">
+                    <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                      <input class="input100" type="text" name="username" placeholder="XX XXXXX-XXXX">
+                      <span class="focus-input100"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Prepended text-->
+              <div class="form-group">
+
+                <label class="col-md-3 control-label" for="prependedtext" id="texto-label">Email<h11>*</h11></label>
+                <div class="col-md-5">
+                  <div class="input-group">
+                    <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                      <input class="input100" type="text" name="username" placeholder="email@email.com">
+                      <span class="focus-input100"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+              <!-- Select Basic -->
+              <div class="form-group">
+                <label class="col-md-3 control-label" for="Cargo" id="texto-label-sexo">Cargo<h11>*</h11></label>
+                <div class="col-md-5">
+                  <select required id="Cargo" name="Cargo" class="form-control">
+                    <option value=""></option>
+                    <option value="Solteiro(a)">Solteiro(a)</option>
+                    <option value="Casado(a)">Casado(a)</option>
+                    <option value="Divorciado(a)">Divorciado(a)</option>
+                    <option value="Viuvo(a)">Viuvo(a)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div id="area-login">
+                <a href="esqueci-senha.html" class="texto-login">
+                  Já possui perfil?
+                </a>
+              </div>
+
+              <div class="form-group">
+
+                <div class="col-md-2"></div>
+                <div class="col-md-4">
+
+                  <button class="login100-form-btn">
+                    Cadastrar
+                  </button>
+                </div>
+              </div>
+    </form>
+
+
+    </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

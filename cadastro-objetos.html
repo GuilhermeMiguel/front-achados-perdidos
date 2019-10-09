@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Cadastro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="css/cadastro-objetos.css">
+  <link rel="stylesheet" type="text/css" href="css/menu-abas.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!--===============================================================================================-->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <section class="cadastro">
+
+    <form class="form-horizontal">
+      <div class="container">
+
+        <div class="row" id="linha-cadastro">
+
+          <div class="panel-body" id="area-cadastro">
+            <div id="titulo">
+              <img src="images/icone-tela-objeto.png"> Objetos
+            </div>
+
+            <!-- Text input-->
+            <div id="area-pesquisa">
+              <div id="elementos">
+                <div class="form-group">
+                  <label class="col-md-1 control-label" for="Selecione" id="texto-label">Selecione<h11>*</h11></label>
+                  <label class="col-md-1"></label>
+                  <label class="col-md-3 control-label" for="Contenha" id="texto-label2">Que Contenha<h11>*</h11>
+                    </label>
+
+                  <br>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-md-3">
+                    <select id="Objetos" name="Objetos" class="form-control">
+                      <option value=""></option>
+                      <option value="Categoria">Categoria</option>
+                      <option value="Cor">Cor</option>
+                    </select>
+                  </div>
+
+
+                  <div class="col-md-5">
+                    <input type="text" class="form-control" name="pesquisa"
+                      placeholder="Deixe vazio para pesquisar todos">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="area-botao">
+
+              <div class="item" id="botao1">
+                <img src="images/icone-search.png" >
+                <input type="button" class="pesquisar" value="Pesquisar" id="botoes">
+              </div>
+
+              <div class="item" id="botao2">
+                <img src="images/icone-adicionar2.png" >
+                <input type="button" class="adicionar" value="Cadastrar" id="botoes">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+ 
+      <div class="alteracao-pagina-tabela">
+        <div class="item botoes-controle-tabela">
+          <p><<</p>
+        </div>
+        <div class="item botoes-controle-tabela">
+          <p><</p>
+        </div>
+        <div class="item botoes-controle-tabela">
+          <p>1/10</p>
+        </div>
+        <div class="item botoes-controle-tabela" >
+          <p>></p>
+        </div>
+        <div class="item botoes-controle-tabela">
+          <p>>></p>
+        </div>
+      </div>
+    
+
+  </section>
+
+  <div id="modal-principal" class="modal-container">
+    <div class="objetos-modal">
+        <div id="banner">
+            <p class="titulo">Cadastro de Objetos</p>
+            <div class="fechar-modal" style="background-image: url(images/icone-fechar-modal.png);">
+               </div>
+        </div>
+        <form >
+          <div class="form-row area-cadastro-modal-objetos">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputCategoria">Categoria</label>
+                    <select id="inputCategoria" class="form-control">
+                      <option selected>Escolher...</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+              <div class="form-group col-md-4">
+                <label for="inputCor">Cor</label>
+                <input type="password" class="form-control" id="inputCor" placeholder="Ex: Preto">
+              </div>
+            
+
+           
+            <div class="form-group col-md-4">
+              <label for="inputTamanho">Tamanho</label>
+              <input type="text" class="form-control" id="inputTamanho" placeholder="Ex: 10 cm">
+            </div>
+          </div>
+
+            <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="inputLocal">Local</label>
+              <input type="text" class="form-control" id="inputLocal" placeholder="Ex: Aquário">
+            </div>
+           
+              <div class="form-group col-md-4">
+                <label for="inputTurno">Turno</label>
+                <input type="text" class="form-control" id="inputTurno" placeholder="Ex: Noite">
+              </div>
+                    <div class=" form-group col-md-4">
+                        <div class="form-group">
+                            <label for="datetimepicker9">Data</label>
+                            <div class='input-group date' id='datetimepicker9'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar">
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                          $(function () {
+                              $('#datetimepicker9').datetimepicker({
+                                  viewMode: 'years'
+                              });
+                          });
+                      </script>
+                     </div>
+
+                      <div class="form-row">
+                      <div class="form-group col-md-12">
+                          <label for="inputInfoComplementar">Informações Complementares</label>
+                          <input type="text" class="form-control" id="inputInfoComplementar" placeholder="Ex: Objeto com...">
+                        </div>
+                      </div>          
+                    </div>
+        
+          <div class="titulo-entregador">
+              <h4>Entregador</h4>
+          </div>
+            
+          <div class="form-row identificacao">
+              
+                  <div class="form-group col-md-4">
+                      <label for="inputCampo">Campo</label>
+                      <select id="inputCampo" class="form-control">
+                        <option selected>Escolher...</option>
+                        <option>Id</option>
+                        <option>Sobrenome</option>
+                      </select>
+                    </div>
+              <div class="form-group col-md-6">
+                  <label for="inputValor">Valor</label>
+                  <input type="text" class="form-control" id="inputValor" placeholder="...">
+                </div>  
+              <div class="form-group col-md-2">
+                  <input type="button" value="Pesquisar" class="pesquisar-entregador">
+                </div>
+
+              
+              </div>    
+
+              <div class="cadastro-entregador" style="display:none;">
+              <div class="form-row">
+                  <div class="form-group col-md-4">
+                      <label for="inputNome">Nome</label>
+                      <input type="text" class="form-control" id="inputNome" placeholder="Ex: João...">
+                    </div>  
+                  <div class="form-group col-md-8">
+                      <label for="inputSobrenome">Sobrenome</label>
+                      <input type="text" class="form-control" id="inputSobrenome" placeholder="Ex: Maciel da silva">
+                    </div>
+                  </div>          
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputTelefone01">Telefone 01</label>
+                        <input type="text" class="form-control" id="inputTelefone01" placeholder="Ex:">
+                      </div>
+                      
+                    <div class="form-group col-md-4">
+                        <label for="inputTelefone02">Telefone 02</label>
+                        <input type="text" class="form-control" id="inputTelefone02" placeholder="Ex:">
+                      </div>
+
+                      <div class="form-group col-md-4">
+                          <label for="inputTurma">Turma</label>
+                          <input type="text" class="form-control" id="inputTurma" placeholder="Ex: 6° ADS">
+                        </div>
+                      </div>
+                    </div>
+              </div>
+          
+            <div class="form-row area-botao-salvar">
+                <div class="form-group col-md-4">
+                  <input type="button" value="Salvar" class="login100-form-btn">
+                </div>
+                <div class="form-group col-md-4">
+                  <input type="button" value="Cancelar" class="login100-form-btn" style="margin-left: -40%;">
+                </div>
+                </div>
+              </div>
+
+
+              <div class="form-row area-botao-salvar-entregador" style="display:none;">
+                  <div class="form-group col-md-4">
+                    <input type="button" value="Salvar" class="btn-salvar-entragador">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <input type="button" value="Cancelar" class="btn-cancelar-entregador" style="margin-left: 86%;">
+                  </div>
+                  </div>
+               
+
+              <div class="acoes-entregador">
+              <div class="cadastrar-entregador"> 
+                  <p class="texto-cadastrar-entregador">Cadastrar...</p>
+                </div>
+
+                <div class="editar-entregador"> 
+                    <p class="texto-editar-entregador">...Editar</p>
+                  </div>
+               </div>
+            <div class="entregador-cadastrado" style="display:none;"> 
+              <p class="texto-entregador-cadastrado">Já cadastrado?</p>
+            </div>
+          </form>
+        </div>        
+
+
+
+
+        <div id="modal-secundario" class="modal-container">
+          <div class="objetos-devolucao-modal">
+              <div id="banner">
+                  <p class="titulo">Devolucao de Objetos</p>
+                  <div class="fechar-modal" style="background-image: url(images/icone-fechar-modal.png);">
+                     </div>
+              </div>
+              <form >
+                <div class="form-row area-devolucao-modal-objetos">
+                  <div class="form-row">
+                     
+                    <div class="form-group col-md-4">
+                      <label for="inputIdDevolucao">Id Devolução</label>
+                      <input type="password" class="form-control" id="inputIdDevolucao" placeholder="">
+                    </div>
+                   
+                  <div class="form-group col-md-4">
+                    <label for="inputIdObjeto">Id Objeto</label>
+                    <input type="text" class="form-control" id="inputIdObjeto" placeholder="">
+                  </div>
+                                  
+                  <div class="form-group col-md-4">
+                    <label for="inputDocumento">Documento</label>
+                    <input type="text" class="form-control" id="inputDocumento" placeholder="Ex:Nº RA, CPF, RG">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                      <label for="inputNome">Nome</label>
+                      <input type="text" class="form-control" id="inputNome" placeholder="Ex: João">
+                    </div>
+                          <div class=" form-group col-md-6">
+                            <label for="inputSobrenome">Sobrenome</label>
+                            <input type="text" class="form-control" id="inputSobrenome" placeholder="Ex: de Almeida Santos">
+                          </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="inputTelefone01">Telefone 01</label>
+                    <input type="text" class="form-control" id="inputTelefone01" placeholder="Ex: (11) 2564-8790">
+                  </div>
+                        <div class=" form-group col-md-6">
+                          <label for="inputTelefone02">Telefone02</label>
+                          <input type="text" class="form-control" id="inputTelefone02" placeholder="Ex: (11) 98965-2365">
+                        </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="inputTurma">Turma</label>
+                  <input type="text" class="form-control" id="inputTurma" placeholder="Ex: 5º Polimeros">
+                </div>
+                      <div class=" form-group col-md-4">
+                        <label for="inputTurno">Turno</label>
+                        <input type="text" class="form-control" id="inputTurno" placeholder="Ex: (11) 98965-2365">
+                      </div>
+           
+                           
+      
+                    <div class=" form-group col-md-4">
+                      <div class="form-group">
+                          <label for="datetimepicker9">Data</label>
+                          <div class='input-group date' id='datetimepicker9'>
+                              <input type='text' class="form-control" />
+                              <span class="input-group-addon">
+                                  <span class="glyphicon glyphicon-calendar">
+                                  </span>
+                              </span>
+                          </div>
+                      </div>
+                      <script type="text/javascript">
+                        $(function () {
+                            $('#datetimepicker9').datetimepicker({
+                                viewMode: 'years'
+                            });
+                        });
+                    </script>
+                   </div>
+                 
+                
+                  <div class="form-row area-botao-salvar-devolucao">
+                      <div class="form-group col-md-3" style="margin-top: 4%;">
+                        <input type="button" value="Salvar" class="login100-form-btn">
+                      </div>
+                      <div class="form-group col-md-3" style="margin-top: 4%;">
+                        <input type="button" value="Cancelar" class="login100-form-btn">
+                      </div>
+                      </div>
+                    </div>
+                </form>
+              </div>        
+              </div>
+
+           
+
+	<script>
+
+    function iniciaModal(modalID) {
+      const modal = document.getElementById(modalID);
+      modal.classList.add('mostrar');
+      modal.addEventListener('click', (e) => {
+        if (e.target.id == modalID || e.target.className == 'fechar') {
+          modal.classList.remove('mostrar');
+        }
+      });
+    }
+
+    const cadastrar = document.querySelector('.cadastro #botao2');
+    cadastrar.addEventListener('click', () => iniciaModal('modal-principal'));
+
+    const pesquisar = document.querySelector('.cadastro #botao1');
+    pesquisar.addEventListener('click', () => iniciaModal('modal-secundario'));
+
+    $(document).on('click','.editar-entregador',function(){
+	$('.identificacao, .acoes-entregador, .area-botao-salvar').fadeOut('slow', function(){
+    $('.objetos-modal').css("height","556px");
+		$('.cadastro-entregador, .entregador-cadastrado, .area-botao-salvar-entregador').fadeIn();
+	});
+});
+
+    $(document).on('click','.cadastrar-entregador',function(){
+	$('.identificacao, .acoes-entregador, .area-botao-salvar').fadeOut('slow', function(){
+    $('.objetos-modal').css("height","556px");
+		$('.cadastro-entregador, .entregador-cadastrado, .area-botao-salvar-entregador').fadeIn();
+	});
+});
+
+$(document).on('click','.texto-entregador-cadastrado',function(){
+	$('.cadastro-entregador, .entregador-cadastrado, .area-botao-salvar-entregador').fadeOut('slow', function(){
+    $('.objetos-modal').css("height","492px");
+		$('.identificacao, .acoes-entregador, .area-botao-salvar').fadeIn();
+	});
+});
+
+  </script>
+	
+
+</body>
+
+</html>
