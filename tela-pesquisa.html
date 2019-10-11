@@ -56,13 +56,13 @@
                    
                 <div class="form-group col-md-3">
                   <label for="inputTamanho">Data Inicio</label>
-                  <input type="text" class="form-control" id="inputTamanho" placeholder="Ex: 10 cm">
+                  <input type="text" class="form-control" id="inputTamanho" placeholder="Ex: 10/05/2019">
                 </div>
 
 
                 <div class="form-group col-md-3">
                     <label for="inputTamanho">Data Fim</label>
-                    <input type="text" class="form-control" id="inputTamanho" placeholder="Ex: 10 cm">
+                    <input type="text" class="form-control" id="inputTamanho" placeholder="Ex: 10/06/2019">
                   </div>
               </div>
             </div>
@@ -77,8 +77,65 @@
           </div>
         </div>
       </div>
+
+      <a id="modalID" class="regras">REGRAS</a>
     </form>
   </section>
 
+
+
+  <div id="modal-principal" class="modal-container">
+    <div class="modal-regras">
+    
+        <div id="banner2">
+            <p class="titulo">Regras</p>
+            <div class="fechar-modal" style="background-image: url(images/icone-fechar-modal.png);">
+               </div>
+              </div>
+              <ul>
+                <li>
+                  Teste
+                </li>
+
+                <li>
+                  Teste
+                </li>
+
+
+                <li>
+                  Teste
+                </li>
+
+                <li>
+                  Teste
+                </li>
+
+                <li>
+                  Teste
+                </li>
+              </ul>
+               
+      
+      
+    </div> 
+ </div>
+ </div>
+ 
+   <script>
+     
+     function iniciaModal(modalID) {
+         const modal = document.getElementById(modalID);
+         modal.classList.add('mostrar');
+         modal.addEventListener('click', (e) => {
+             if(e.target.id == modalID || e.target.className == 'fechar-modal') {
+                 modal.classList.remove('mostrar');
+             }
+         });
+     }
+ 
+     const regras = document.querySelector('.regras');
+     regras.addEventListener('click', () => iniciaModal('modal-principal'));
+ 
+     </script>
 </body>
 </html>
